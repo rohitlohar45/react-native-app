@@ -4,7 +4,7 @@ require('./models/db');
 const userRouter = require('./routes/user');
 
 const User = require('./models/user');
-
+const PORT = process.env.PORT || 8000
 const app = express();
 
 // app.use((req, res, next) => {
@@ -32,6 +32,6 @@ app.get('/', (req, res) => {
   res.json({ success: true, message: 'Welcome to backend zone!' });
 });
 
-app.listen(8000, () => {
+app.listen(PORT, () => {
   console.log('port is listening');
 });
